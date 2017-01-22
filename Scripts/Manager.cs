@@ -12,15 +12,20 @@ public class Manager : MonoBehaviour
 
     public bool likesMusic = false;
     public bool likesGaming = false;
-    public bool likesTV = false;
-    public bool likesYoutube = false;
+    public bool likesMedia = false;
     public bool likesSocialMedia = false;
-    public bool likesExercising = false;
+    public bool likesNoHobbies = false;
 
     public bool likesEDM = false;
     public bool likesRap = false;
     public bool likesPop = false;
     public bool likesRock = false;
+    public bool noMusic = false;
+
+    public bool drawing = false;
+    public bool mixing = false;
+    public bool video = false;
+    public bool volunteering = false;
 
     void Awake()
     {
@@ -88,51 +93,48 @@ public class Manager : MonoBehaviour
 
     public void NewSchedule()
     {
-        Debug.Log("In order to cut back wasteful time, do these steps: ");
-        if (likesMusic == true)
+        if (likesNoHobbies == true)
         {
-            if (likesEDM == true)
+
+        }
+        else
+        {
+            Debug.Log("In order to cut back wasteful time, do these steps: ");
+            if (likesMusic == true)
             {
-                Debug.Log("Learn how to make EDM music");
+                if (likesEDM == true)
+                {
+                    Debug.Log("Learn how to make EDM music");
+                }
+                if (likesRap == true)
+                {
+                    Debug.Log("Learn how to make fire mixtapes");
+                }
+                if (likesPop == true)
+                {
+                    Debug.Log("Learn how to sing");
+                }
+                if (likesRock == true)
+                {
+                    Debug.Log("Learn how to guitar/bass");
+                }
             }
-            if (likesRap == true)
+
+            if (likesGaming == true)
             {
-                Debug.Log("Learn how to make fire mixtapes");
+                Debug.Log("At least learn how to stream on Twitch");
+                Debug.Log("Have you considered Game development?");
             }
-            if (likesPop == true)
+
+            if (likesMedia == true)
             {
-                Debug.Log("Learn how to sing");
+                Debug.Log("Grab a camera, grab a decent microphone, go ham");
             }
-            if (likesRock == true)
+
+            if (likesSocialMedia == true)
             {
-                Debug.Log("Learn how to guitar/bass");
+                Debug.Log("Go out and give to the community by doing charity or something");
             }
-        }
-
-        if (likesGaming == true)
-        {
-            Debug.Log("At least learn how to stream on Twitch");
-            Debug.Log("Have you considered Game development?");
-        }
-
-        if (likesTV == true)
-        {
-            Debug.Log("Write fanfiction or something idk");
-        }
-
-        if (likesYoutube == true)
-        {
-            Debug.Log("Grab a camera, grab a decent microphone, go ham");
-        }
-
-        if (likesSocialMedia == true)
-        {
-            Debug.Log("Go out and give to the community by doing charity or something");
-        }
-
-        if (likesExercising == true)
-        {
-            Debug.Log("Congratulations, that's healthy, keep exercising");
         }
 
         FinalMessage();

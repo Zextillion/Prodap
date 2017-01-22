@@ -8,6 +8,7 @@ public class MusicSelector : MonoBehaviour
     public bool rock = false;
     public bool pop = false;
     public bool rap = false;
+    public bool noMusic = false;
     
     void OnMouseDown()
     {
@@ -26,6 +27,10 @@ public class MusicSelector : MonoBehaviour
         else if (rap == true)
         {
             Manager.current.likesRap = true;
+        }
+        else if (noMusic == true)
+        {
+            Manager.current.noMusic = true;
         }
     }
 }

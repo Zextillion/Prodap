@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HobbySelector : MonoBehaviour
-{ 
+{
+    public bool media = false;
     public bool gaming = false;
-    public bool tv = false;
-    public bool youtube = false;
     public bool socialMedia = false;
-    public bool exercising = false;
     public bool music = false;
+    public bool noHobbies = false;
     
     void OnMouseDown()
     {
@@ -17,25 +16,21 @@ public class HobbySelector : MonoBehaviour
         {
             Manager.current.likesGaming = true;
         }
-        else if (tv == true)
+        else if (media == true)
         {
-            Manager.current.likesTV = true;
-        }
-        else if (youtube == true)
-        {
-            Manager.current.likesYoutube = true;
+            Manager.current.likesMedia = true;
         }
         else if (socialMedia == true)
         {
             Manager.current.likesSocialMedia = true;
         }
-        else if (exercising == true)
-        {
-            Manager.current.likesExercising = true;
-        }
         else if (music == true)
         {
             Manager.current.likesMusic = true;
+        }
+        else if (noHobbies == true)
+        {
+            Manager.current.likesNoHobbies = true;
         }
     }
 }

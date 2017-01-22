@@ -12,6 +12,7 @@ public class Next : MonoBehaviour
 	void OnMouseDown()
     {
         nextScreen.SetActive(true);
+        currentScreen.GetComponent<Animator>().SetBool("Exit", true);
         currentScreen.SetActive(false);
     }
 }
